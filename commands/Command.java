@@ -1,11 +1,8 @@
 package commands;
 
-import java.io.*;
 
-public class Command {
+public interface Command {
     
-    public static void main(String[] args) throws IOException{
-        
-    }
+    
 
 }
