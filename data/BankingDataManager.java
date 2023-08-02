@@ -8,7 +8,7 @@ public class BankingDataManager {
     private static final List<DataManagerMain> dataControllers = new ArrayList<>();
 
     static {
-        dataControllers.add(null);
+        dataControllers.add(new CustomerController());
     }
 
     

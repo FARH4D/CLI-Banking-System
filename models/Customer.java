@@ -5,17 +5,17 @@ import java.util.List;
 
 public class Customer {
     private int id;
-    private float balance;
     private String name;
     private String email;
+    private float balance;
 
     private final List<Transaction> transactions = new ArrayList<>();
 
-    public Customer(int id, float balance, String name, String email){
+    public Customer(int id, String name, String email, float balance){
         this.id = id;
-        this.balance = balance;
         this.name = name;
         this.email = email;
+        this.balance = balance;
     }
 
     public void addTransaction(Transaction transaction){
@@ -34,14 +34,6 @@ public class Customer {
         this.id = id;
     }
 
-    public float getBalance() {
-        return this.balance;
-    }
-
-    public void setBalance(float balance) {
-        this.balance = balance;
-    }
-
     public String getName() {
         return this.name;
     }
@@ -56,6 +48,14 @@ public class Customer {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public float getBalance() {
+        return this.balance;
+    }
+
+    public void setBalance(float balance) {
+        this.balance = balance;
     }
 
 }
