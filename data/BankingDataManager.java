@@ -2,6 +2,10 @@ package data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.io.IOException;
+
+import exceptions.bankingSystemException;
+import main.BankingSystem;
 
 public class BankingDataManager {
     
@@ -11,6 +15,14 @@ public class BankingDataManager {
         dataControllers.add(new CustomerController());
     }
 
-    
+    public static BankingSystem loadData() throws IOException, bankingSystemException{
+        BankingSystem bankingSystem = new BankingSystem();
+
+        for (DataManagerMain data : dataControllers){
+            data.loadData(bankingSystem);
+        }
+        return bankingSystem;
+
+    }
 
 }
