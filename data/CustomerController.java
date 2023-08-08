@@ -28,7 +28,7 @@ public class CustomerController implements DataManagerMain{
                     float balance = Float.parseFloat(properties[3]);
 
                     Customer newCustomer = new Customer(id, name, email, balance);
-                    
+                    bankingSystem.addCustomer(newCustomer);
                     
                 } catch (NumberFormatException ex) {
                     throw new bankingSystemException("Error when loading customer " + properties[0] + " on line " + pointer + "\nError: " + ex);

@@ -22,7 +22,6 @@ public class BankingDataManager {
             data.loadData(bankingSystem);
         }
         return bankingSystem;
-
     }
 
 }
