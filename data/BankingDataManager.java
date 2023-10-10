@@ -24,4 +24,10 @@ public class BankingDataManager {
         return bankingSystem;
     }
 
+    public static void storeData(BankingSystem bankingSystem) throws IOException{
+
+        for (DataManagerMain data : dataControllers){
+            data.storeData(bankingSystem);
+        }
+    }
 }

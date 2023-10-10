@@ -6,14 +6,16 @@ import java.util.List;
 public class Customer {
     private int id;
     private String name;
+    private String phoneNumber;
     private String email;
     private float balance;
 
     private final List<Transaction> transactions = new ArrayList<>();
 
-    public Customer(int id, String name, String email, float balance){
+    public Customer(int id, String name, String phoneNumber, String email, float balance){
         this.id = id;
         this.name = name;
+        this.phoneNumber = phoneNumber;
         this.email = email;
         this.balance = balance;
     }
@@ -40,6 +42,14 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getNumber() {
+        return this.phoneNumber;
+    }
+
+    public void setNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {

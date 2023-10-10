@@ -32,5 +32,7 @@ public class Main{
                 System.out.println("Error: " + ex.getMessage());
             }
         }
+        BankingDataManager.storeData(bankingSystem);
+        System.exit(0);
     }
 }
