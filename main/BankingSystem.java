@@ -34,5 +34,23 @@ public class BankingSystem {
         return list;
     }
 
+    public List<Transaction> listTransactions(){
+        List<Transaction> list = new ArrayList<>(transactions.values());
+        return list;
+    }
+
+    public Customer findCustomer(int id) throws bankingSystemException{
+        if (!customers.containsKey(id)){
+            throw new bankingSystemException("A customer with this id does not exist!");
+        }
+        return customers.get(id);
+    }
+
+    public Transaction findTransaction(int id) throws bankingSystemException{
+        if (!transactions.containsKey(id)){
+            throw new bankingSystemException("A transaction with this id does not exist!");
+        }
+        return transactions.get(id);
+    }
 
 }

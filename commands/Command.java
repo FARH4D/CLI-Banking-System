@@ -13,6 +13,7 @@ public interface Command {
     + "\teditcustomer [customer id]        Edit a customer's details\n"
     + "\tdeletecustomer [customer id]      Delete a customer\n"
     + "\tlisttrans                         List all transactions\n"
+    + "\tfindtrans [transaction id]        Find a specific customer"
     + "\tdeletetrans [transaction id]      Delete a transaction\n"
     + "\thelp                              Displays this help message\n"
     + "\texit                              Exits the program (who could have guessed)\n";

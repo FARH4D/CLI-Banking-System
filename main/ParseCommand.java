@@ -6,8 +6,11 @@ import java.io.InputStreamReader;
 
 import commands.AddCustomer;
 import commands.Command;
+import commands.FindCustomer;
+import commands.FindTransaction;
 import commands.Help;
 import commands.ListCustomers;
+import commands.ListTransactions;
 
 public class ParseCommand {
     
@@ -31,16 +34,16 @@ public class ParseCommand {
             } else if (command.equals("listcustomers")){
                 return new ListCustomers();
             } else if (command.equals("listtrans")){
-                
+                return new ListTransactions();
             }
         } else if (commandParts.length == 2){
-
+            int id = Integer.parseInt(commandParts[1]);
+            if (command.equals("findcustomer")){
+                return new FindCustomer(id);
+            } else if (command.equals("findtrans")){
+                return new FindTransaction(id);
+            }
         }
-
-
         return null;
-        
     }
-
-
 }
