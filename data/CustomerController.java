@@ -50,6 +50,7 @@ public class CustomerController implements DataManagerMain{
                 out.print(customer.getName() + Seperator);
                 out.print(customer.getNumber() + Seperator);
                 out.print(customer.getEmail() + Seperator);
+                out.print(customer.getBalance() + Seperator);
                 if (customer.getTransactions().size() > 0) {
                 	for (int i = 0; i < customer.getTransactions().size(); i++) {
                     	out.print(customer.getTransactions().get(i).getId() + Seperator);
@@ -62,5 +63,4 @@ public class CustomerController implements DataManagerMain{
             }
         }
     }
-
 }

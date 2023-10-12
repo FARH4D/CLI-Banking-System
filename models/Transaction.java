@@ -8,7 +8,7 @@ public class Transaction {
     private Customer customer2;
     private LocalDate transactionDate;
 
-    public Transaction(Customer customer1, Customer customer2, LocalDate transactionDate){
+    public Transaction(Integer id, Customer customer1, Customer customer2, LocalDate transactionDate){
         this.id = id;
         this.customer1 = customer1;
         this.customer2 = customer2;

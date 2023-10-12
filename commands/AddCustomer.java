@@ -29,7 +29,7 @@ public class AddCustomer implements Command{
 
         Customer customer = new Customer(++id, name, phoneNumber, email, 0);
         bankingSystem.addCustomer(customer);
-        System.out.println("Customer id " + ++id + " has been added");
+        System.out.println("Customer id " + customer.getId() + " has been added");
 
     }
 

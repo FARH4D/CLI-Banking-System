@@ -20,6 +20,7 @@ public class Main{
         System.out.println("Enter a command, type in help to see list of commands");
 
         while(true){
+            System.out.print("> ");
             String userCommand = br.readLine();
             if (userCommand.equals("exit")){    
                 break;
